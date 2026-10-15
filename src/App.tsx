@@ -16,7 +16,6 @@ import {
   Users,
   Megaphone,
   FileDown,
-  Award,
   BriefcaseBusiness,
 } from "lucide-react";
 import "./index.css";
