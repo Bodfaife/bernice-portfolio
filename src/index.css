@@ -1076,3 +1076,230 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* EXPERIENCE */
+.experience-card {
+  padding: 32px;
+  border: 1px solid var(--border, #deded6);
+  border-radius: 18px;
+  background: var(--card-bg, #f8f7f2);
+}
+
+.experience-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.experience-card-heading h3,
+.experience-projects h3,
+.process-card h3,
+.package-card h3,
+.certificate-info h3 {
+  margin: 10px 0;
+}
+
+.experience-card-heading > svg {
+  color: var(--accent, #23764d);
+}
+
+.experience-list,
+.package-card ul {
+  padding-left: 20px;
+  margin: 20px 0;
+  line-height: 1.9;
+}
+
+.experience-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0 16px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border, #deded6);
+  border-bottom: 1px solid var(--border, #deded6);
+}
+
+.experience-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.experience-stats strong {
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+}
+
+.experience-stats span,
+.experience-card-heading p,
+.certificate-info p {
+  color: var(--muted, #77776e);
+  font-size: 0.9rem;
+}
+
+.experience-tools {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.9rem;
+}
+
+.experience-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.experience-projects article {
+  padding: 26px;
+  border: 1px solid var(--border, #deded6);
+  border-radius: 16px;
+}
+
+.experience-projects p,
+.process-card p,
+.package-card p {
+  line-height: 1.8;
+}
+
+/* MARKETING PROCESS */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.process-card {
+  padding: 24px 18px;
+  border-top: 2px solid var(--accent, #23764d);
+  background: var(--card-bg, #f8f7f2);
+}
+
+.process-card > span {
+  color: var(--accent, #23764d);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* SERVICE PACKAGES */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  border: 1px solid var(--border, #deded6);
+  border-radius: 18px;
+}
+
+.package-card > p {
+  margin-bottom: 8px;
+}
+
+.package-card ul {
+  margin-top: 8px;
+}
+
+.package-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--accent, #23764d);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.package-featured {
+  border-color: var(--accent, #23764d);
+}
+
+.package-custom {
+  grid-column: 1 / -1;
+}
+
+.packages-note {
+  margin-top: 22px;
+  color: var(--muted, #77776e);
+  font-size: 0.9rem;
+}
+
+/* CERTIFICATES */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.certificate-card {
+  overflow: hidden;
+  border: 1px solid var(--border, #deded6);
+  border-radius: 18px;
+  background: var(--card-bg, #f8f7f2);
+}
+
+.certificate-placeholder {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  background: rgba(35, 118, 77, 0.07);
+  color: var(--accent, #23764d);
+  text-align: center;
+}
+
+.certificate-placeholder span {
+  font-size: 0.85rem;
+}
+
+.certificate-info {
+  padding: 24px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-card {
+    padding: 22px;
+  }
+
+  .experience-projects,
+  .packages-grid,
+  .certificates-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-custom {
+    grid-column: auto;
+  }
+
+  .experience-stats {
+    gap: 20px;
+  }
+
+  .experience-card-heading {
+    gap: 12px;
+  }
+}

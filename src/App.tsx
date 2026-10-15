@@ -16,6 +16,9 @@ import {
   TrendingUp,
   Users,
   Megaphone,
+  FileDown,
+  Award,
+  BriefcaseBusiness,
 } from "lucide-react";
 import "./index.css";
 
@@ -152,10 +155,12 @@ function App() {
 
     <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
     {[
-      ["About", "#about"],
-      ["Services", "#services"],
-      ["Selected Work", "#work"],
-      ["Contact", "#contact"],
+        ["About", "#about"],
+        ["Experience", "#experience"],
+        ["Services", "#services"],
+        ["Selected Work", "#work"],
+        ["Certificates", "#certificates"],
+        ["Contact", "#contact"],
     ].map(([label, href]) => (
       <a key={href} href={href} onClick={closeMenu}>
       {label}
@@ -214,8 +219,13 @@ function App() {
     <a className="button button-dark" href="#work">
     Explore my work <ArrowRight size={17} />
     </a>
-    <a className="text-link" href="#about">
-    Get to know me <ArrowDown size={15} />
+
+    <a
+    className="text-link"
+    href="/Bernice-Adamilo-Victor-CV.pdf"
+    download="Bernice-Adamilo-Victor-CV.pdf"
+    >
+    Download CV <FileDown size={16} />
     </a>
     </motion.div>
 
@@ -292,19 +302,35 @@ function App() {
 
     <div className="about-copy">
     <p className="large-copy">
-    Hi, I'm Bernice — an email marketer and paid ads specialist who
-    loves figuring out what makes people pay attention, click and
-    take action.
+    Hi, I'm Bernice — a digital marketer specializing in email
+    marketing and paid advertising, helping startups and small-to-
+    medium-sized businesses grow through practical, customer-focused
+    marketing.
     </p>
+
     <p>
-    I help growing businesses communicate better with their
-    audiences through emails and ads that feel clear, useful and
-    worth engaging with.
+    I believe effective marketing starts with understanding people:
+    what they need, what catches their attention, what makes them
+    trust a brand, and what motivates them to take action.
     </p>
+
     <p>
-    I'm big on understanding the audience first, then creating
-    marketing that makes sense for both the business and its
-    customers.
+    My strongest area is email marketing, where I combine audience
+    understanding with engaging copy to create emails that feel
+    relevant rather than overly promotional.
+    </p>
+
+    <p>
+    I've worked on live email campaigns, content planning and
+    marketing strategies for businesses, while continuing to develop
+    my expertise in paid advertising.
+    </p>
+
+    <p>
+    Whether you need to make better use of an existing email list or
+    reach new customers through paid advertising, my goal is simple:
+    create marketing that makes sense for your business and the
+    people you're trying to reach.
     </p>
 
     <a href="#services" className="underlined-link">
@@ -353,6 +379,123 @@ function App() {
     </div>
     </section>
 
+    <section className="packages section-pad" id="packages">
+    <div className="section-kicker">
+    <span>06 — SERVICES & PACKAGES</span>
+    <span>SUPPORT BUILT AROUND YOUR GOALS</span>
+    </div>
+
+    <div className="section-heading-row">
+    <h2>
+    Find your
+    <br />
+    <em>starting point.</em>
+    </h2>
+    <p>
+    From consistent email communication to structured paid
+    campaigns, choose the kind of support your business needs.
+    </p>
+    </div>
+
+    <div className="packages-grid">
+    <article className="package-card">
+    <span className="project-type">EMAIL MARKETING</span>
+    <h3>Email Starter</h3>
+    <p>
+    For small businesses that want to communicate consistently
+    with their audience.
+    </p>
+    <ul>
+    <li>Newsletter writing</li>
+    <li>Campaign planning</li>
+    <li>Email scheduling</li>
+    <li>Basic performance review</li>
+    </ul>
+    <a href="mailto:victorbernice84@gmail.com?subject=Email%20Starter%20Package">
+    Get started <ArrowUpRight size={16} />
+    </a>
+    </article>
+
+    <article className="package-card package-featured">
+    <span className="project-type">EMAIL MARKETING</span>
+    <h3>Email Growth</h3>
+    <p>
+    For businesses with an existing email list that want to
+    get more value from it.
+    </p>
+    <ul>
+    <li>Multiple newsletter campaigns</li>
+    <li>Email strategy and copywriting</li>
+    <li>A/B testing</li>
+    <li>Campaign scheduling</li>
+    <li>Performance analysis</li>
+    <li>Optimization recommendations</li>
+    </ul>
+    <a href="mailto:victorbernice84@gmail.com?subject=Email%20Growth%20Package">
+    Get started <ArrowUpRight size={16} />
+    </a>
+    </article>
+
+    <article className="package-card">
+    <span className="project-type">PAID ADVERTISING</span>
+    <h3>Ads Starter</h3>
+    <p>
+    For businesses preparing to launch a structured paid
+    advertising campaign.
+    </p>
+    <ul>
+    <li>Campaign strategy</li>
+    <li>Audience research</li>
+    <li>Ad copy</li>
+    <li>Campaign planning and setup</li>
+    <li>Lead-generation strategy</li>
+    <li>Basic performance analysis</li>
+    </ul>
+    <a href="mailto:victorbernice84@gmail.com?subject=Ads%20Starter%20Package">
+    Get started <ArrowUpRight size={16} />
+    </a>
+    </article>
+
+    <article className="package-card">
+    <span className="project-type">PAID ADVERTISING</span>
+    <h3>Ads Growth</h3>
+    <p>
+    For businesses looking to build a more structured paid
+    advertising strategy.
+    </p>
+    <ul>
+    <li>Campaign strategy and audience targeting</li>
+    <li>Ad copywriting and campaign setup</li>
+    <li>Retargeting strategy</li>
+    <li>Lead generation</li>
+    <li>Performance analysis</li>
+    <li>Optimization recommendations</li>
+    </ul>
+    <a href="mailto:victorbernice84@gmail.com?subject=Ads%20Growth%20Package">
+    Get started <ArrowUpRight size={16} />
+    </a>
+    </article>
+
+    <article className="package-card package-custom">
+    <span className="project-type">TAILORED SUPPORT</span>
+    <h3>Custom Package</h3>
+    <p>
+    Not every business needs the same thing. Bernice can discuss
+    a combination of email marketing, paid advertising and
+    marketing strategy based on your specific goals.
+    </p>
+    <a href="mailto:victorbernice84@gmail.com?subject=Custom%20Marketing%20Package">
+    Build my package <ArrowUpRight size={16} />
+    </a>
+    </article>
+    </div>
+
+    <p className="packages-note">
+    Pricing can be discussed directly based on the scope and needs
+    of each project.
+    </p>
+    </section>
+
     <section className="work section-pad" id="work">
     <div className="section-kicker">
     <span>03 — SELECTED WORK</span>
@@ -399,6 +542,196 @@ function App() {
     *The 100% click/open rate figure is reproduced from the original
     portfolio and has not been independently verified.
     </p>
+    </section>
+
+    <section className="experience section-pad" id="experience">
+    <div className="section-kicker">
+    <span>04 — EXPERIENCE</span>
+    <span>REAL PROJECTS. PRACTICAL EXPERIENCE.</span>
+    </div>
+
+    <div className="section-heading-row">
+    <h2>
+    Experience that
+    <br />
+    <em>shapes the strategy.</em>
+    </h2>
+    <p>
+    Email marketing, content planning and marketing strategy
+    developed around real business needs.
+    </p>
+    </div>
+
+    <article className="experience-card">
+    <div className="experience-card-heading">
+    <div>
+    <span className="project-type">EMAIL MARKETING INTERN</span>
+    <h3>DigitalBizGuru</h3>
+    <p>Six-month internship</p>
+    </div>
+    <BriefcaseBusiness size={26} />
+    </div>
+
+    <p>
+    I support email marketing activities using Groundhogg on
+    WordPress, working on campaigns from copywriting through
+    scheduling and broadcast.
+    </p>
+
+    <ul className="experience-list">
+    <li>Writing newsletter and campaign copy</li>
+    <li>Planning email content and automated email flows</li>
+    <li>Scheduling and broadcasting campaigns</li>
+    <li>Monitoring campaign performance and audience engagement</li>
+    <li>Reviewing campaign data to identify opportunities</li>
+    </ul>
+
+    <div className="experience-stats">
+    <div>
+    <strong>23,216+</strong>
+    <span>Emails sent</span>
+    </div>
+    <div>
+    <strong>432</strong>
+    <span>New contacts</span>
+    </div>
+    <div>
+    <strong>125</strong>
+    <span>Engaged contacts</span>
+    </div>
+    <div>
+    <strong>0</strong>
+    <span>Unsubscribed contacts</span>
+    </div>
+    </div>
+
+    <p className="metric-disclaimer">
+    Figures reported for one campaign reporting period in Bernice's
+    portfolio. They are not presented as lifetime totals.
+    </p>
+
+    <span className="experience-tools">
+    Tools: Groundhogg · WordPress
+    </span>
+    </article>
+
+    <div className="experience-projects">
+    <article>
+    <span className="project-type">CONTENT STRATEGY</span>
+    <h3>DigitalBizGuru</h3>
+    <p>
+    A two-month content calendar with captions, carousel and
+    reel scripts covering content strategy, copywriting and
+    paid advertising.
+    </p>
+    </article>
+
+    <article>
+    <span className="project-type">CONTENT STRATEGY</span>
+    <h3>AldoraWoman</h3>
+    <p>
+    A two-month content calendar for a fashion business,
+    covering product promotion, brand awareness, customer
+    engagement and consistent publishing.
+    </p>
+    </article>
+
+    <article>
+    <span className="project-type">MARKETING STRATEGY</span>
+    <h3>Premium-X Labs</h3>
+    <p>
+    A six-month marketing strategy covering awareness,
+    engagement, conversion, promotion and customer growth.
+    </p>
+    </article>
+
+    <article>
+    <span className="project-type">MARKETING STRATEGY</span>
+    <h3>Blackrock Furniture</h3>
+    <p>
+    A marketing strategy focused on brand positioning,
+    customer engagement and a clearer marketing direction.
+    </p>
+    </article>
+
+    <article>
+    <span className="project-type">EMAIL MARKETING</span>
+    <h3>TaskManna</h3>
+    <p>
+    Welcome and product-introduction newsletters, monthly
+    check-ins and B2B email content.
+    </p>
+    </article>
+
+    <article>
+    <span className="project-type">EMAIL COPYWRITING</span>
+    <h3>SkillHaus Africa & Social Tech Girl</h3>
+    <p>
+    Welcome emails, cohort announcements, service introductions
+    and account-recovery email copy.
+    </p>
+    </article>
+    </div>
+    </section>
+
+    <section className="process section-pad" id="process">
+    <div className="section-kicker">
+    <span>05 — MY PROCESS</span>
+    <span>FROM IDEA TO EXECUTION</span>
+    </div>
+
+    <div className="section-heading-row">
+    <h2>
+    A clear plan.
+    <br />
+    <em>Purposeful execution.</em>
+    </h2>
+    <p>
+    Every campaign starts with understanding the business and
+    ends with learning what can be improved.
+    </p>
+    </div>
+
+    <div className="process-grid">
+    {[
+      {
+        number: "01",
+        title: "Discover",
+        description:
+        "I learn about your business, audience, offer, competitors and goals.",
+      },
+      {
+        number: "02",
+        title: "Strategize",
+        description:
+        "I identify the campaign direction, messaging and approach that fit your objectives.",
+      },
+      {
+        number: "03",
+        title: "Create",
+        description:
+        "I develop the email copy, ad copy and campaign assets needed to communicate clearly.",
+      },
+      {
+        number: "04",
+        title: "Launch",
+        description:
+        "I set up, schedule and launch the campaign according to the agreed strategy.",
+      },
+      {
+        number: "05",
+        title: "Analyse",
+        description:
+        "I review performance, identify opportunities and use insights to improve future campaigns.",
+      },
+    ].map((step) => (
+      <article className="process-card" key={step.number}>
+      <span>{step.number}</span>
+      <h3>{step.title}</h3>
+      <p>{step.description}</p>
+      </article>
+    ))}
+    </div>
     </section>
 
     <section className="approach section-pad">
@@ -451,6 +784,51 @@ function App() {
     <BarChart3 size={23} />
     </article>
     </div>
+    </div>
+    </section>
+
+    <section className="certificates section-pad" id="certificates">
+    <div className="section-kicker">
+    <span>07 — CERTIFICATIONS</span>
+    <span>LEARNING & PROFESSIONAL DEVELOPMENT</span>
+    </div>
+
+    <div className="section-heading-row">
+    <h2>
+    Learning that
+    <br />
+    <em>keeps me growing.</em>
+    </h2>
+    <p>
+    Certifications that form part of my ongoing development
+    in digital and social media marketing.
+    </p>
+    </div>
+
+    <div className="certificates-grid">
+    <article className="certificate-card">
+    <div className="certificate-placeholder">
+    <Award size={42} strokeWidth={1.2} />
+    <span>Certificate image coming soon</span>
+    </div>
+    <div className="certificate-info">
+    <span className="project-type">2026</span>
+    <h3>Digital Marketing Certificate</h3>
+    <p>BeTechified</p>
+    </div>
+    </article>
+
+    <article className="certificate-card">
+    <div className="certificate-placeholder">
+    <Award size={42} strokeWidth={1.2} />
+    <span>Certificate image coming soon</span>
+    </div>
+    <div className="certificate-info">
+    <span className="project-type">2026</span>
+    <h3>Social Media Marketing Certificate</h3>
+    <p>HP LIFE & HP Foundation</p>
+    </div>
+    </article>
     </div>
     </section>
 
