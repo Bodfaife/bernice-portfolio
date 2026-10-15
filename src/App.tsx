@@ -244,7 +244,7 @@ function App() {
     transition={{ duration: 0.9, delay: 0.2 }}
     >
     <img
-    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=85"
+    src="/certificates/Bernice.jpg"
     alt="Marketing professionals working together"
     />
     <div className="visual-label">
@@ -806,10 +806,11 @@ function App() {
 
     <div className="certificates-grid">
     <article className="certificate-card">
-    <div className="certificate-placeholder">
-    <Award size={42} strokeWidth={1.2} />
-    <span>Certificate image coming soon</span>
-    </div>
+    <img
+    src="/certificates/bernice1.jpg"
+    alt="Digital Marketing Certificate from BeTechified"
+    loading="lazy"
+    />
     <div className="certificate-info">
     <span className="project-type">2026</span>
     <h3>Digital Marketing Certificate</h3>
@@ -818,10 +819,11 @@ function App() {
     </article>
 
     <article className="certificate-card">
-    <div className="certificate-placeholder">
-    <Award size={42} strokeWidth={1.2} />
-    <span>Certificate image coming soon</span>
-    </div>
+    <img
+    src="/certificates/bernice2.jpg"
+    alt="Social Media Marketing Certificate from HP LIFE and HP Foundation"
+    loading="lazy"
+    />
     <div className="certificate-info">
     <span className="project-type">2026</span>
     <h3>Social Media Marketing Certificate</h3>
